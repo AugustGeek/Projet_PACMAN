@@ -3,7 +3,7 @@ import Model.Entity;
 
 public class Physical {
 	
-	boolean isCollision(Entity e1, Entity e2){
+	public static boolean isCollision(Entity e1, Entity e2){
 		if(e1.getShape().intersects(e2.getShape())) {return true;}
 		return false;
 	}

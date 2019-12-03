@@ -8,7 +8,7 @@ public class Physical {
 		return false;
 	}
 	
-	void movement(Entity e){
+	public void movement(Entity e){
 		if(e.getPE_direction() != null) {
 			if(e.getPE_direction() == "Left"){
 				move_left(e);
@@ -25,25 +25,25 @@ public class Physical {
 		}
 	}
 	
-	void move_left(Entity e) {
+	public static void move_left(Entity e) {
 		e.setPE_x(e.getPE_x() - e.getPE_vitesse());
 		e.setShapeLocation(e.getPE_x() - e.getPE_vitesse(), e.getPE_y());
 	}
-	void move_right(Entity e) {
+	public static void move_right(Entity e) {
 		e.setPE_x(e.getPE_x() + e.getPE_vitesse());
 		e.setShapeLocation(e.getPE_x() + e.getPE_vitesse(), e.getPE_y());
 	}
-	void move_up(Entity e) {
+	public static void move_up(Entity e) {
 		e.setPE_x(e.getPE_x() - e.getPE_vitesse());
 		e.setShapeLocation(e.getPE_x(), e.getPE_y() + e.getPE_vitesse());
 	}
-	void move_down(Entity e) {
+	public static void move_down(Entity e) {
 		e.setPE_x(e.getPE_x() - e.getPE_vitesse());
 		e.setShapeLocation(e.getPE_x(), e.getPE_y() - e.getPE_vitesse());
 	}
 	
-	void stop(Entity e) {
-		e.setPE_x(0);
+	public static void stop(Entity e) {
+		e.setPE_vitesse(0);
 	}
 	
 	

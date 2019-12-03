@@ -8,7 +8,7 @@ public class Physical {
 		return false;
 	}
 	
-	public void movement(Entity e){
+	public void movement_physical(Entity e){
 		if(e.getPE_direction() != null) {
 			if(e.getPE_direction() == "Left"){
 				move_left(e);
